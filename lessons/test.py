@@ -1,11 +1,13 @@
-SECRET: int = 3 
+secret: str = "python"
+result: str = ""
+WHITE_BOX: str = "\U00002B1C"
+GREEN_BOX: str = "\U0001F7E9"
+YELLOW_BOX: str = "\U0001F7E8"
+user_guess: str = input("Give me a word! ")
 
-print("I am thinking of an impossible number between one and five, what is it? ")
-guess: int = int(input("What is your useless guess? "))
+if user_guess[0] == secret[0]:
+    result + GREEN_BOX
+else:
+    result + WHITE_BOX
 
-if guess == SECRET:
-    print("How! Are you a magician." )
-else: 
-    print("Sorry, dumb and dumbmer! ")
-
-    print("Thank you for playing ;)")
+print(result)
