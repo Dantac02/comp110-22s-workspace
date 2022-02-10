@@ -26,12 +26,11 @@ def contains_char(a: str, b: str) -> bool:
         return False
 
 
-def emojified(a: str, b: str):
-    # a is the guess, and b is the secret.
+def emojified(a: str, b: str) -> None:
     """Function designed to return information regarding guess word and secret."""
+    # a is the guess, and b is the secret.
     assert len(a) == len(b)
     i: int = 0
-    t: int = 0
     result: str = ""
     while i < len(a):
         if b[i] == a[i]:
@@ -46,7 +45,7 @@ def emojified(a: str, b: str):
     print(result)
 
 
-def input_guess(c: int):
+def input_guess(c: int) -> str:
     """This allows the user to make a guess the length of their input."""
     # c is the users guess.
     guess: str = input("Enter a " + str(c) + " character word: ")
@@ -65,17 +64,13 @@ def main() -> None:
     i: int = 1
     turn: int = 1
     score: int = 0
-    while i < 7:
+    while i <= 6:
         print("=== Turn " + str(turn) + "/6 ===")
         guess = input_guess(len(secret))
         emojified(guess, secret)
         if guess == secret:
             score = score + 1
-            i = i + 5
-            if turn < 6:
-                turn = turn + 1
-            else:
-                turn = 6
+            i = i + 6
         else:
             i = i + 1
             turn = turn + 1
