@@ -65,6 +65,7 @@ def bell_tower_2(x: float, y: float) -> None:
     
 
 def tower_structure(x: float, y: float) -> None:    
+   """Building the tower"""
     # tower building 
     leo.penup()
     leo.goto(x, y)
@@ -170,7 +171,7 @@ def fine_details(x: float, y: float) -> None:
     leo.goto(133, -27)
     leo.pendown()
     leo.seth(0)
-    i: int = 0
+    i = 0
     while i < 4:
         leo.forward(18)
         leo.left(90)
@@ -179,7 +180,7 @@ def fine_details(x: float, y: float) -> None:
     leo.goto(133, -87)
     leo.pendown()
     leo.seth(0)
-    i: int = 0
+    i = 0
     while i < 4:
         leo.forward(18)
         leo.left(90)
@@ -188,7 +189,7 @@ def fine_details(x: float, y: float) -> None:
     leo.penup()
     leo.goto(193, 29)
     leo.pendown()
-    i: int = 0
+    i = 0
     while i < 4:
         leo.forward(18)
         leo.left(90)
@@ -197,7 +198,7 @@ def fine_details(x: float, y: float) -> None:
     leo.goto(193, -27)
     leo.pendown()
     leo.seth(0)
-    i: int = 0
+    i = 0
     while i < 4:
         leo.forward(18)
         leo.left(90)
@@ -206,7 +207,7 @@ def fine_details(x: float, y: float) -> None:
     leo.goto(193, -87)
     leo.pendown()
     leo.seth(0)
-    i: int = 0
+    i = 0
     while i < 4:
         leo.forward(18)
         leo.left(90)
@@ -249,4 +250,3 @@ def main() -> None:
 if __name__ == "__main__":
     print("")
 
-main()
