@@ -66,7 +66,7 @@ def bell_tower_2(x: float, y: float) -> None:
 
 def tower_structure(x: float, y: float) -> None:    
    """Building the tower"""
-    # tower building 
+    # tower building
     leo.penup()
     leo.goto(x, y)
     leo.pendown()
