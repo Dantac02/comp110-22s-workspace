@@ -17,12 +17,16 @@ def only_evens(x: list[int]) -> list[int]:
 
 def sub(x: list[int], y: int, z: int) -> list[int]:
     """A function that appends a new list from input list between inputed indexes."""
+    if y < 0:
+        y = 0
+    if z > len(x):
+        z = len(x)
     i: int = y
     sub_list = list()
-    while i < (z):
+    while i < z:
         sub_list.append(x[i])
         i += 1
-    return(sub_list)
+    return sub_list
 
 
 def concat(x: list[int], y: list[int]) -> list[int]:
