@@ -6,19 +6,31 @@ __author__: str = "730398535"
 def invert(a: dict[str, str]) -> dict[str, str]:
     """A function that will flip the keys and value of a dict."""
     webster: dict[str, str] = {}
-    while key in a:
-        webster[key] = value[a]
-        webster[value] = key[a]
+    for key in a:
+        webster[a[key]] = key
     return(webster)
 
 
 def favorite_color(a: dict[str, str]) -> str:
     """A function that returns the color that is inputed the most, or the first if there is a tie."""
-    return("lol")
+    w: dict[str, int] = {}
+    for key in a:
+        if a[key] not in w:
+            a[key] = 1
+        else:
+            w[key] += 1
+    return (str(w))
 
 
 def count(a: list[str]) -> dict[str, int]:
-    """A function that will convert a list into a dict with unique Keys and Values."""
-    webster: dict[str, int] = {}
-    return(webster)
-    
+    """A function that will count."""
+    w: dict[str, int] = {}
+    for item in a:
+        if item not in w:
+            w[item] = 1
+        else:
+            w[item] += 1
+    return w
+
+
+favorite_color({"KJ": "blue", "AJ": "blue"})

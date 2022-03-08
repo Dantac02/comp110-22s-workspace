@@ -27,31 +27,31 @@ def test_invert_03() -> None:
 def test_favorite_color_01() -> None:
     """A test for an edge case."""
     x: dict[str, str] = {'Kevin': 'Carolina Blue', 'Todd': 'Teary Blue', 'Mccombs': 'Teary Blue', 'Rasmey': 'Carolina Blue'}
-    assert favorite_color(x) == str == "Carolina Blue"
+    assert favorite_color(x) == "Carolina Blue"
 
 
 def test_favorite_color_02() -> None:
     """Second test for a use case."""
     x: dict[str, str] = {'Kevin': 'Red', 'Bob': 'Red', 'Kris': 'Green'}
-    assert favorite_color(x) == str == "Red"
+    assert favorite_color(x) == "Red"
 
 
 def test_favortite_color_03() -> None:
     """Third test for a use case."""
     x: dict[str, str] = {'Evans': 'Eco Blue'}
-    assert favorite_color(x) == str == "Eco Blue"
+    assert favorite_color(x) == "Eco Blue"
 
 
 def test_count_01() -> None:
     """A test for a use case."""
     x: list[str] = ["Apple", "Apple", "Banna", "Orange", "Pear"]
-    assert count(x) == {'Apple': '2', 'Banna': '1', 'Orange': '1', 'Pear': '1'}
+    assert count(x) == {'Apple': 2, 'Banna': 1, 'Orange': 1, 'Pear': 1}
 
 
 def test_count_02() -> None:
     """A test for a use case."""
     x: list[str] = ["Apple", "Banna", "Orange", "Pear", "Orange"]
-    assert count(x) == {'Apple': '1', 'Banna': '1', 'Orange': '2', 'Pear': '1'}
+    assert count(x) == {'Apple': 1, 'Banna': 1, 'Orange': 2, 'Pear': 1}
 
 
 def test_count_03() -> None:
